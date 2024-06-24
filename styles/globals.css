@@ -1,0 +1,372 @@
+/* Fonts */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../fonts/SpaceGrotesk-Bold.eot');
+  src: url('../fonts/SpaceGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+      url('../fonts/SpaceGrotesk-Bold.woff') format('woff'),
+      url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype'),
+      url('../fonts/SpaceGrotesk-Bold.svg#SpaceGrotesk-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../fonts/SpaceGrotesk-Medium.eot');
+  src: url('../fonts/SpaceGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+      url('../fonts/SpaceGrotesk-Medium.woff') format('woff'),
+      url('../fonts/SpaceGrotesk-Medium.ttf') format('truetype'),
+      url('../fonts/SpaceGrotesk-Medium.svg#SpaceGrotesk-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../fonts/SpaceGrotesk-Regular.eot');
+  src: url('../fonts/SpaceGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+      url('../fonts/SpaceGrotesk-Regular.woff') format('woff'),
+      url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype'),
+      url('../fonts/SpaceGrotesk-Regular.svg#SpaceGrotesk-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suez One';
+  src: url('../fonts/SuezOne-Regular.eot');
+  src: url('../fonts/SuezOne-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SuezOne-Regular.woff2') format('woff2'),
+      url('../fonts/SuezOne-Regular.woff') format('woff'),
+      url('../fonts/SuezOne-Regular.ttf') format('truetype'),
+      url('../fonts/SuezOne-Regular.svg#SuezOne-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  font-family: 'Space Grotesk';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Suez One';
+  font-weight: 400;
+  line-height: 1.5;
+  color: #36343C;
+  position: relative;
+}
+h1 {
+  -webkit-text-stroke: 2px #1B1A1E;
+}
+.btn {
+  font-weight: 700;
+}
+/* Hero */
+.hero .presale-timer-container::before {
+  position: absolute;
+  content: "";
+  background-image: url('../public/assets/icons/pngwing-6.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 127px;
+  height: 161px;
+  bottom: 40px;
+  left: 0;
+}
+
+.shine-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  animation: shine 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.7) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(360deg);
+  }
+}
+
+/* .shine-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  animation: spin 4s infinite linear;
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px white;
+  animation: shine 2s infinite;
+}
+
+.line1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.line2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.line3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.line4 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.line5 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.line6 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.line7 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(315deg);
+}
+
+.line8 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(360deg);
+} */
+
+/* @keyframes shine {
+  0%, 100% {
+    height: 1px;
+    width: 5px;
+  }
+  50% {
+    height: 1px;
+    width: 25px;
+  }
+} */
+
+/* @keyframes shine {
+  0%, 100% {
+    height: 5px;
+    opacity: 1;
+  }
+  50% {
+    height: 15px;
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+} */
+/* MediaPartners */
+.mediaPartners .swiper {
+  padding: 30px 0 90px;
+}
+.mediaPartners .swiper-wrapper {
+  align-items: center;
+}
+.mediaPartners .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 61px;
+}
+.MediaPartnersSwiperMobile .swiper-slide {
+  display: grid !important;
+  align-items: center;
+  justify-content: center;
+}
+.MediaPartnersSwiperMobile .swiper-slide .logo-container {
+  position: relative;
+  min-height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MediaPartnersSwiperMobile .swiper-slide .logo-container:last-child {
+  margin-top: 30px;
+}
+.MediaPartnersSwiperMobile .swiper-slide .logo-container::after,
+.mediaPartners .desktop_tablet-swiper .swiper-slide:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255,255,255,0.12);
+  width: 1px;
+  height: 37px;
+  top: 13px;
+  right: 0;
+}
+.MediaPartnersSwiperMobile .swiper-slide .logo-container::after {
+  right: -25px;
+}
+.roadMapSection .swiper-button-nextFour::after,
+.roadMapSection .swiper-button-prevFour::after,
+.presaleSection .swiper-button-nextThree::after,
+.presaleSection .swiper-button-prevThree::after,
+.upcomingSection .swiper-button-nextTwo::after,
+.upcomingSection .swiper-button-prevTwo::after,
+.mediaPartners .swiper-button-next::after,
+.mediaPartners .swiper-button-prev::after {
+  content: "";
+}
+.roadMapSection .swiper-button-nextFour:hover,
+.roadMapSection .swiper-button-nextFour:active,
+.roadMapSection .swiper-button-nextFour:focus,
+.roadMapSection .swiper-button-prevFour:hover,
+.roadMapSection .swiper-button-prevFour:active,
+.roadMapSection .swiper-button-prevFour:focus,
+.upcomingSection .swiper-button-prevTwo:hover,
+.upcomingSection .swiper-button-prevTwo:active,
+.upcomingSection .swiper-button-prevTwo:focus,
+.mediaPartners .swiper-button-prev:hover,
+.mediaPartners .swiper-button-prev:active,
+.mediaPartners .swiper-button-prev:focus,
+.upcomingSection .swiper-button-nextTwo:hover,
+.upcomingSection .swiper-button-nextTwo:active,
+.upcomingSection .swiper-button-nextTwo:focus,
+.mediaPartners .swiper-button-next:hover,
+.mediaPartners .swiper-button-next:active,
+.mediaPartners .swiper-button-next:focus {
+  box-shadow: 4px 4px 20px #C5D2EF;
+  cursor: pointer;
+}
+.mediaPartners .swiper-button-prev {
+  left: 46% !important;
+}
+.mediaPartners .swiper-button-next {
+  right: 46% !important;
+}
+.upcomingSection .swiper-button-prevTwo,
+.MediaPartnersSwiperMobile .swiper-button-prev {
+  left: 37% !important;
+}
+.MediaPartnersSwiperMobile .swiper-button-next {
+  right: 34% !important;
+}
+/* upcomingSection */
+.upcomingSectionSwiper-container .swiper {
+  padding: 0 0 100px;
+}
+.upcomingSection .swiper-button-nextTwo {
+  right: -54%;
+  bottom: 44px;
+}
+/* presaleSection */
+.roadMapSection .swiper-button-prevFour,
+.presaleSection .swiper-button-prevThree {
+  left: auto;
+  right: 20px;
+}
+.presaleSection .swiper-button-nextThree {
+  right: 0;
+}
+.presaleSection .swiper-button-nextThree:hover,
+.presaleSection .swiper-button-nextThree:active,
+.presaleSection .swiper-button-nextThree:focus,
+.presaleSection .swiper-button-prevThree:hover,
+.presaleSection .swiper-button-prevThree:active,
+.presaleSection .swiper-button-prevThree:focus {
+  box-shadow: 4px 4px 20px #AFB7C5;
+  cursor: pointer;
+}
+/* roadMapSection */
+.roadMapSection .swiper {
+  overflow: visible;
+}
+/* footer */
+.phone-num > div {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.phone-num:hover > div,
+.phone-num:focus > div {
+  transform: scale(1.1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 639px) {
+  .upcomingSection .swiper-slide {
+    width: 80%;
+  }
+}
