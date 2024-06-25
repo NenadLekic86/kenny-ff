@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.4",
     "autoprefixer": "^10.4.19",
     "bcrypt": "^5.1.1",
     "framer-motion": "^11.2.11",

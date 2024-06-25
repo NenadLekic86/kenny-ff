@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+
+import BigCow from '@/public/assets/images/big-cow.webp'
 import Link from 'next/link'
 import Links from './links/Links'
 import Image from 'next/image'
@@ -71,7 +73,16 @@ const Navbar = () => {
               <Links />
 
               <Link className='btn text-[16px] rounded-[30px] text-[#34313A] hover:text-[#ffffff] bg-[#E7DBED] hover:bg-[#AD89B1] transition-all relative z-10' href="#" alt="Connect Wallet">Connect Wallet</Link>
+              <li className='absolute bottom-0 left-0'>
+                <Image 
+                  src={BigCow}
+                  alt=""
+                  className="relative z-40"
+                />
+              </li>
             </ul>
+
+            
         </div>
       </div>
     </div>
